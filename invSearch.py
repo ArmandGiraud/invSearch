@@ -1,7 +1,7 @@
 import json
 from itertools import chain
 
-file_path="../slug_search_terms.json"
+file_path="data/slug_search_terms.json"
 
 with open(file_path) as f:
     slug_queries = json.load(f)
