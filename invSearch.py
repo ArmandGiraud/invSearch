@@ -9,8 +9,6 @@ with open(file_path) as f:
 def get_slugs(query):
     return query.split("$")
 
-
-
 def flatten(l):
     return list(chain.from_iterable(l))
 

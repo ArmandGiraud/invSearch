@@ -1,0 +1,1 @@
+gunicorn -t 3000 --threads 4 -b :10004 "api:create_app()"
