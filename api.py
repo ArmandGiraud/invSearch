@@ -23,6 +23,7 @@ def create_app():
     @app.route('/')
     def hello():  # pylint: disable=unused-variable
         return 'invsearch api'
+    print("api is ready")
     return app
 
 
