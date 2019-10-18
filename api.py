@@ -12,7 +12,7 @@ def create_app():
     app = Flask(__name__)
     app.config['JSON_AS_ASCII'] = False
 
-    ts = TermsSearch("suggest_dict.json", "stops.txt")
+    ts = TermsSearch("suggest_dict_f.json", "stops.txt")
     @app.route('/inv', methods=['GET'])
     @cross_origin()
     def suggest():  # pylint: disable=unused-variable
@@ -23,6 +23,7 @@ def create_app():
     @app.route('/')
     def hello():  # pylint: disable=unused-variable
         return 'invsearch api'
+
     print("api is ready")
     return app
 
