@@ -54,8 +54,8 @@ class TermsSearch():
         self.session = tf.Session(graph=g)
         self.session.run(init_op)
 
-        self.res = self.session.run(response_embeddings, {self.r_placeholder: [self.remove_stops(k) for k,v in self.suggest_dict],
-                                                    self.c_placeholder: ["" for k,v in self.suggest_dict]})
+        self.res = self.session.run(response_embeddings, {self.r_placeholder: [self.remove_stops(k) for k in self.suggest_dict],
+                                                    self.c_placeholder: ["" for k in self.suggest_dict]})
 
     def predict_use_terms(self, query, n=10):
         query = self.remove_stops(query)
