@@ -64,7 +64,7 @@ class TermsSearch():
                 self.question_embeddings, {self.q_placeholder: questions})
 
         topn = cosine_similarity(self.res["outputs"], question_results["outputs"].reshape(1, -1)).squeeze().argsort()[::-1][:n]
-        return [list(self.suggest_dict.keys())[t] for t in topn]
+        return [self.suggest_dict[t] for t in topn]
 
 
 if __name__ == "__main__":
